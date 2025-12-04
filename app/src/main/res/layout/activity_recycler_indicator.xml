@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- RecyclerView ngang + indicator -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerBanner"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal" />
+
+    <me.relex.circleindicator.CircleIndicator2
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp" />
+
+    <!-- Search -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search product" />
+
+    <!-- RecyclerView dọc + search -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProducts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
